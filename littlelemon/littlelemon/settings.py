@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'LittleLemon',
+        'USER': 'admindjango',
+        'PASSWORD': 'employee@123!',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
@@ -116,12 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'restaurant/static/'
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static/",
-    'restaurant/'
-]
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
